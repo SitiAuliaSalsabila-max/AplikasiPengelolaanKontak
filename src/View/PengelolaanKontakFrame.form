@@ -172,6 +172,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblNamaKontakMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblNomorTelepon">
           <Properties>
@@ -227,6 +230,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton2"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnHapus">
           <Properties>
