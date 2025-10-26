@@ -4,14 +4,14 @@
  */
 package Model;
 
-import database.DatabaseConnection;
+import Database.DatabaseConnection;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class KontakDao {
 
-    // Method untuk mengambil semua data kontak di tabel
+    // Method untuk mengambil semua data Kontak di tabel
     public List<Kontak> getAllContacts() throws SQLException {
         List<Kontak> contacts = new ArrayList<>();
         String sql = "SELECT * FROM contacts";
@@ -33,7 +33,7 @@ public class KontakDao {
         return contacts;
     }
 
-    // Method untuk menambahkan kontak ke tabel
+    // Method untuk menambahkan Kontak ke tabel
     public void addContact(Kontak contact) throws SQLException {
         String sql = "INSERT INTO contacts (nama, nomor_telepon, kategori) VALUES (?, ?, ?)";
 
@@ -47,7 +47,7 @@ public class KontakDao {
         }
     }
 
-    // Method untuk mengupdate kontak di tabel
+    // Method untuk mengupdate Kontak di tabel
     public void updateContact(Kontak contact) throws SQLException {
         String sql = "UPDATE contacts SET nama = ?, nomor_telepon = ?, kategori = ? WHERE id = ?";
 
@@ -62,7 +62,7 @@ public class KontakDao {
         }
     }
 
-    // Method untuk menghapus kontak di tabel
+    // Method untuk menghapus Kontak di tabel
     public void deleteContact(int contactId) throws SQLException {
         String sql = "DELETE FROM contacts WHERE id = ?";
 
@@ -74,7 +74,7 @@ public class KontakDao {
         }
     }
 
-    // Method untuk mencari kontak di tabel
+    // Method untuk mencari Kontak di tabel
     public List<Kontak> searchContacts(String keyword) throws SQLException {
         List<Kontak> contacts = new ArrayList<>();
         String sql = "SELECT * FROM contacts WHERE nama LIKE ? OR nomor_telepon LIKE ?";
